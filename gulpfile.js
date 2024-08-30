@@ -8,6 +8,7 @@ const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const ts = require('gulp-typescript');
 const tsProject = ts.createProject('tsconfig.json');
+const webpack = require('webpack-stream');
 
 const fileIncludeSettings = {
 	prefix: '@@',
@@ -36,8 +37,13 @@ gulp.task('html', function () {
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('scripts', function () {
-	return gulp.src('./src/scripts/*.ts').pipe(webpack());
+gulp.task('js', function () {
+	return gulp
+		.src('./src/scripts/*.ts')
+		.pipe(plumber(plumberNotify('TS')))
+		.pipe(webpack(require('./webpack.config.js', webpack)))
+		.pipe(gulp.dest('./dist/scripts'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('sass', function () {
@@ -73,13 +79,14 @@ gulp.task('watch', function () {
 	gulp.watch('./src/**/*.html', gulp.parallel('html')).on('change', browserSync.reload);
 	gulp.watch('./src/img/**/*', gulp.parallel('images')).on('change', browserSync.reload);
 	gulp.watch('./src/fonts/**/*', gulp.parallel('fonts')).on('change', browserSync.reload);
+	gulp.watch('./src/scripts/**/*.ts', gulp.parallel('js'));
 });
 
 gulp.task(
 	'default',
 	gulp.series(
 		'clean',
-		gulp.parallel('html', 'sass', 'images', 'fonts'),
+		gulp.parallel('html', 'sass', 'images', 'fonts', 'js'),
 		gulp.parallel('server', 'watch'),
 	),
 );

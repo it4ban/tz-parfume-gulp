@@ -26,9 +26,11 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.5.4",
+    "webpack": "^5.94.0",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "gulp-imagemin": "^9.1.0"
+    "gulp-imagemin": "^9.1.0",
+    "swiper": "^11.1.11"
   }
 }

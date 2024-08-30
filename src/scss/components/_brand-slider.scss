@@ -1,35 +1,64 @@
-.brand-slider {
+.brands {
 	padding-bottom: 74px;
 
 	&__wrapper {
+		justify-content: space-between;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+.brand-slider {
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	overflow: hidden;
+
+	&__buttons {
+		z-index: 4;
+
+		&-prev {
+			position: absolute;
+			top: 50%;
+			left: 0; // Позиционирование стрелок вне контейнера
+			transform: translateY(-50%) rotate(180deg);
+		}
+
+		&-next {
+			position: absolute;
+			top: 50%;
+			right: 0px; // Позиционирование стрелок вне контейнера
+			transform: translateY(-50%);
+		}
+	}
+
+	&__wrapper {
 		justify-content: flex-start;
-		gap: 100px;
+		width: 100%;
+		margin: 0;
+		overflow: hidden;
 	}
 
 	&__list {
 		position: relative;
-		gap: 60px;
-		padding-left: 30px;
+		display: flex; // Используем flexbox для управления отступами
+		padding: 0;
+		margin: 0;
 	}
 
-	&__button {
-		position: absolute;
-		top: 50%;
-
-		&--prev {
-			left: 5px;
-			transform: translateY(-50%) rotate(180deg);
-		}
-
-		&--next {
-			right: 10px;
-			transform: translateY(-50%);
-		}
+	&__link {
+		text-align: center;
+		width: auto;
+		flex-shrink: 0; // Убираем сжатие для слайдов
 	}
 }
 
 .all-brands {
 	gap: 17px;
+	flex-shrink: 0;
+	margin-right: 17px;
+	padding-left: 30px;
 
 	&__header {
 		font-size: $small;
@@ -38,7 +67,7 @@
 
 	&__link {
 		background-color: $blue-light;
-		padding: 3px 7px;
+		padding: 6px 8px;
 		border-radius: 30px;
 	}
 }
