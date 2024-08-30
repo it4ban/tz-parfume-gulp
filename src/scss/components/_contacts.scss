@@ -1,0 +1,81 @@
+.contacts {
+	padding-top: 60px;
+	padding-bottom: 44px;
+	&__left-side {
+		grid-column: 6 span;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__buttons {
+		gap: 13px;
+		align-items: flex-end;
+		padding-right: 60px;
+
+		.icon-button {
+			width: 160px;
+			height: 42px;
+			padding: 12px 14px 11px;
+			gap: 11px;
+			&__text {
+				color: $light;
+				font-size: $extra-small;
+			}
+
+			&:hover svg {
+				width: 22px;
+				height: 22px;
+			}
+		}
+
+		.input {
+			width: 100%;
+			padding-top: 4px;
+
+			&__field {
+				padding-right: 0px;
+			}
+
+			&__icon {
+				right: 5px;
+			}
+
+			.icon-button {
+				width: 42px;
+				height: 42px;
+				flex-direction: column;
+
+				&:hover svg {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 26px;
+		font-weight: bold;
+	}
+
+	&__description {
+		font-size: $extra-small;
+	}
+
+	&__right-side {
+		grid-column: 6 span;
+
+		.phone {
+			font-size: 24px;
+		}
+	}
+}
+
+.contacts__media {
+	gap: 10px;
+	padding-top: 23px;
+
+	&-text {
+		font-size: $extra-small;
+	}
+}

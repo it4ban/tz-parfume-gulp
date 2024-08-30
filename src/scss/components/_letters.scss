@@ -1,0 +1,30 @@
+.letters {
+	padding-bottom: 20px;
+
+	&__list {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		&--active {
+			background-color: $blue-light;
+			width: 26px;
+			height: 26px;
+			padding: 5px;
+			border-radius: 30px;
+			text-align: center;
+
+			> .letters__link {
+				color: $blue;
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__link {
+		color: $gray;
+		opacity: 1;
+		font-size: small;
+	}
+}

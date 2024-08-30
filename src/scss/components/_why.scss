@@ -1,0 +1,88 @@
+.why {
+	padding-top: 86px;
+	padding-bottom: 120px;
+
+	&__wrapper {
+		padding-top: 55px;
+	}
+
+	.icon-button {
+		width: 54px;
+		height: 54px;
+	}
+
+	&__left-side {
+		grid-column: 4 span;
+		grid-row: 1 / 2;
+	}
+
+	&__right-side {
+		grid-column: 8 span;
+		gap: 20px;
+
+		&__block {
+			grid-column: 6 span;
+
+			&:nth-child(1) .icon-button:hover svg path {
+				fill: $light;
+			}
+
+			&:nth-child(4) .icon-button:hover svg path {
+				fill: $light;
+			}
+
+			&:nth-child(4):hover .icon-button svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		.icon-button {
+			width: 54px;
+			height: 54px;
+
+			&:hover svg path {
+				fill: transparent;
+			}
+		}
+
+		.why-block {
+			min-height: 232px;
+			padding-top: 22px;
+			display: block;
+
+			&__content {
+				padding-top: 28px;
+			}
+		}
+	}
+}
+
+.why-block {
+	background-color: #f2f3f5;
+	border-radius: 20px;
+	padding: 27px 0 20px 32px;
+	height: 100%;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-between;
+
+	&:hover .icon-button svg {
+		width: 35px;
+		height: 35px;
+	}
+
+	&__content {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__title {
+		font-size: $medium;
+	}
+
+	&__description {
+		font-size: $small;
+		padding-right: 65px;
+	}
+}

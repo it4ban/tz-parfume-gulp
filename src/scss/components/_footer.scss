@@ -1,0 +1,42 @@
+.footer {
+	padding-top: 80px;
+	padding-bottom: 105px;
+	&__item {
+		grid-column: 3 span;
+		color: $light;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 18px;
+
+		&-header {
+			font-size: 20px;
+		}
+
+		.logo {
+			color: $light;
+		}
+	}
+
+	&__menu {
+		padding-top: 15px;
+
+		&-list {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 18px;
+		}
+
+		&-link {
+			color: $light;
+			font-size: $extra-small;
+		}
+	}
+
+	&__contacts {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 18px;
+		padding-top: 15px;
+	}
+}

@@ -1,0 +1,31 @@
+// base
+@import 'vars';
+@import 'mixins/font_face';
+@import 'fonts';
+@import 'global';
+
+// header
+@import 'components/tab-bar';
+@import 'components/main-option';
+@import 'components/second-option';
+@import 'components/category';
+@import 'components/header-slider';
+@import 'components/letters';
+@import 'components/brand-slider';
+@import 'components/brand-adds';
+
+//main
+@import 'components/new';
+@import 'components/banner';
+@import 'components/blog';
+@import 'components/category-second';
+@import 'components/news';
+@import 'components/reccomend';
+@import 'components/why';
+@import 'components/internet-shop';
+@import 'components/contacts';
+
+//footer
+@import 'components/footer';
+
+@import 'media';

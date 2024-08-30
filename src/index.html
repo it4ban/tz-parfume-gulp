@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ParfumParadise</title>
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	@@include('partials/tab-bar.html')
+
+	<header class="header">
+		@@include('partials/main-option.html')
+		@@include('partials/second-option.html')
+		@@include('partials/category.html')
+		@@include('partials/header-slider.html')
+		@@include('partials/letters.html')
+		@@include('partials/brand-slider.html')
+		@@include('partials/brand-adds.html')
+	</header>
+
+	<main class="main">
+		<div class="bg--accent">
+			@@include('partials/new.html')
+			@@include('partials/banner.html')
+			@@include('partials/blog.html')
+		</div>
+
+		@@include('partials/category-second.html')
+		@@include('partials/hit.html')
+
+		<div class="bg--accent bg--translate">
+			@@include('partials/news.html')
+		</div>
+
+		@@include('partials/reccomend.html')
+		@@include('partials/why.html')
+		@@include('partials/internet-shop.html')
+		<div class="bg--accent">
+			@@include('partials/contacts.html')
+		</div>
+
+		<div class="bg--dark">
+			@@include('partials/footer.html')
+		</div>
+	</main>
+
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

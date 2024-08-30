@@ -1,0 +1,53 @@
+.category-second {
+	padding-top: 98px;
+	padding-bottom: 120px;
+	&__list {
+		&-item {
+			background-image: url('/img/images/gradients/tirrin-women-category.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: top center;
+			overflow: hidden;
+			height: 310px;
+			width: 100%;
+			border-radius: 20px;
+			position: relative;
+			grid-column: 3 span;
+
+			.icon-button:hover svg {
+				width: 20px;
+				height: 20px;
+
+				path {
+					fill: $light;
+				}
+			}
+
+			&:nth-child(2) {
+				background-image: url('/img/images/gradients/tirring-man-category.png');
+			}
+
+			&:nth-child(3) {
+				background-image: url('/img/images/gradients/tirring-general-category.png');
+			}
+
+			&:nth-child(4) {
+				background-image: url('/img/images/gradients/tirring-save-cosmetic.png');
+			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 26px;
+		left: 22px;
+		font-size: 24px;
+		max-width: 120px;
+	}
+
+	&__icon {
+		position: absolute;
+		bottom: 8px;
+		right: 2px;
+	}
+}

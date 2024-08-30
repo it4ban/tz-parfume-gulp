@@ -1,0 +1,33 @@
+.main-option {
+  padding-top: 20px;
+  padding-bottom: 16px;
+
+  &__list {
+    align-items: center;
+    grid-gap: 10px;
+    justify-content: space-between;
+  }
+
+  &__link {
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  &__item {
+    position: relative;
+
+    &--active::after {
+      content: '';
+      display: none;
+    }
+  }
+
+  &__text--underline {
+    text-decoration: underline;
+    text-underline-offset: 2.6px;
+  }
+
+  &__info {
+    margin-left: 5px;
+  }
+}

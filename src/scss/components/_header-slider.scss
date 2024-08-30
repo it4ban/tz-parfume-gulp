@@ -1,0 +1,10 @@
+.header-slider {
+	padding-top: 21px;
+	padding-bottom: 22px;
+
+	&__slide {
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}

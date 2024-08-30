@@ -1,0 +1,109 @@
+.brand-adds {
+	&__item-wrapper {
+		justify-content: space-between;
+	}
+
+	&__item {
+		position: relative;
+		grid-column: 4 span;
+		width: 100%;
+		min-height: 387px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0px 35px;
+
+		&:hover .icon-button {
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('/img/images/gradients/tirring-blue.png');
+			border-radius: 30px;
+			background-repeat: no-repeat;
+			background-position: top center;
+			background-size: cover;
+			z-index: -1;
+		}
+
+		&:nth-child(2) {
+			&::after {
+				transform: rotateY(360deg) scaleY(-1);
+			}
+		}
+
+		&:nth-child(3) {
+			&::after {
+				transform: rotateY(360deg) scale(-1, -1);
+			}
+		}
+	}
+
+	&__link {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+
+	&__item-image {
+		overflow: hidden;
+		height: auto;
+		max-height: 253px;
+		max-width: 100%;
+	}
+
+	&__item-image-back {
+		position: absolute;
+		height: auto;
+		max-width: 200px;
+
+		&--left {
+			top: 0px;
+			left: 0;
+		}
+
+		&--right {
+			top: 82px;
+			right: 0;
+		}
+	}
+
+	&__item-arrow {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+
+	&__item-bottom {
+		align-items: center;
+		justify-content: center;
+		gap: 9px;
+
+		&__percent {
+			font-size: $large;
+			font-weight: bold;
+			font-size: 76px;
+			color: $dark;
+		}
+
+		&__header {
+			font-size: 20px;
+			line-height: 30px;
+
+			&--bold {
+				font-weight: bold;
+				font-size: 28px;
+			}
+		}
+	}
+}

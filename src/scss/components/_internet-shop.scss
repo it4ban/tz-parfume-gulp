@@ -1,0 +1,65 @@
+.internet-shop {
+	padding-bottom: 120px;
+
+	&__left-side {
+		grid-column: 6 span;
+		flex-direction: column;
+		gap: 24px;
+
+		.icon-button {
+			width: 22px;
+			height: 22px;
+		}
+
+		.read-block {
+			transition: all 0.3s ease-in-out;
+			gap: 10px;
+			width: 130px;
+			padding: 4px;
+
+			&__text {
+				transition: all 0.3s ease-in-out;
+			}
+
+			.icon-button__text {
+				font-size: 12px;
+			}
+		}
+
+		.read-block:hover {
+			background-color: $dark;
+			border-radius: 30px;
+
+			.icon-button {
+				transform: translateX(5px);
+				&__text {
+					position: relative;
+					color: $light;
+					left: 10px;
+				}
+			}
+
+			svg {
+				width: 11px;
+				height: 11px;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: $section-header;
+	}
+
+	&__description {
+		font-weight: 400;
+		font-size: 18px;
+		padding-top: 28px;
+		padding-right: 10px;
+		color: $gray;
+	}
+
+	&__right-side {
+		grid-column: 6 span;
+	}
+}
