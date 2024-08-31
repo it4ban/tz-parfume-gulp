@@ -1,3 +1,4 @@
+import { menuToggle } from './menu-toggle/index';
 import { createSlider } from './slider';
 import {
 	headerSliderOptions,
@@ -16,17 +17,6 @@ createSlider('.hit-slider', hitSliderOptions);
 createSlider('.reccomend-slider', reccomendSliderOptions);
 
 document.addEventListener('DOMContentLoaded', () => {
-	const categoryMenu = document.querySelector('.category-menu__list');
-	const categoryMenuItems = document.querySelectorAll('.category-menu__item');
-
-	categoryMenuItems.forEach((categoryMenuItem) => {
-		categoryMenuItem.addEventListener('click', () => {
-			const activeItem = categoryMenu?.querySelector('.category-menu__item--active');
-			if (activeItem) {
-				activeItem.classList.remove('category-menu__item--active');
-			}
-
-			categoryMenuItem.classList.add('category-menu__item--active');
-		});
-	});
+	menuToggle('.category-menu__list', '.category-menu__item', '.category-menu__item--active');
+	menuToggle('.letters__list', '.letters__item', '.letters__item--active');
 });

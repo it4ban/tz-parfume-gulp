@@ -11,9 +11,10 @@
 			background-color: $blue-light;
 			width: 26px;
 			height: 26px;
-			padding: 5px;
+			padding: 3px;
 			border-radius: 30px;
 			text-align: center;
+			transition: all 0.2s ease-in-out;
 
 			> .letters__link {
 				color: $blue;
