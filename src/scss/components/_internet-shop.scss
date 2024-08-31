@@ -51,6 +51,11 @@
 		font-size: $section-header;
 	}
 
+	&__image {
+		width: 100%;
+		height: 100%;
+	}
+
 	&__description {
 		font-weight: 400;
 		font-size: 18px;

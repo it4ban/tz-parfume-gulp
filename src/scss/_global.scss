@@ -115,6 +115,10 @@ p {
 		font-size: $section-header;
 	}
 
+	&__navigation {
+		gap: 10px;
+	}
+
 	&__buttons {
 		gap: 10px;
 

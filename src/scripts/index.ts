@@ -1,63 +1,32 @@
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { createSlider } from './slider';
+import {
+	headerSliderOptions,
+	brandSliderOptions,
+	newSliderOptions,
+	hitSliderOptions,
+	reccomendSliderOptions,
+	blogSliderOptions,
+} from './slider/slider-options';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+createSlider('.swiper', headerSliderOptions);
+createSlider('.brand-slider', brandSliderOptions);
+createSlider('.new-slider', newSliderOptions);
+createSlider('.blog-slider', blogSliderOptions);
+createSlider('.hit-slider', hitSliderOptions);
+createSlider('.reccomend-slider', reccomendSliderOptions);
 
-const swiper = new Swiper('.swiper', {
-	spaceBetween: 20,
+document.addEventListener('DOMContentLoaded', () => {
+	const categoryMenu = document.querySelector('.category-menu__list');
+	const categoryMenuItems = document.querySelectorAll('.category-menu__item');
 
-	pagination: {
-		el: '.swiper-pagination',
-	},
+	categoryMenuItems.forEach((categoryMenuItem) => {
+		categoryMenuItem.addEventListener('click', () => {
+			const activeItem = categoryMenu?.querySelector('.category-menu__item--active');
+			if (activeItem) {
+				activeItem.classList.remove('category-menu__item--active');
+			}
 
-	autoplay: {
-		delay: 3500,
-		disableOnInteraction: false,
-	},
-
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-
-	modules: [Navigation, Pagination, Autoplay],
-});
-
-const brandSlider = new Swiper('.brand-slider', {
-	loop: true,
-	slidesPerView: 5,
-	spaceBetween: 20,
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-	centeredSlides: true,
-
-	navigation: {
-		nextEl: '.brand-slider__buttons-next',
-		prevEl: '.brand-slider__buttons-prev',
-	},
-	modules: [Navigation, Autoplay],
-});
-
-const newSlider = new Swiper('.new-slider', {
-	spaceBetween: 20,
-	slidesPerView: 4,
-});
-
-const blogSlider = new Swiper('.blog-slider', {
-	spaceBetween: 20,
-	slidesPerView: 4,
-});
-
-const hitSlider = new Swiper('.hit-slider', {
-	spaceBetween: 20,
-	slidesPerView: 4,
-});
-
-const reccomendSlider = new Swiper('.reccomend-slider', {
-	spaceBetween: 20,
-	slidesPerView: 4,
+			categoryMenuItem.classList.add('category-menu__item--active');
+		});
+	});
 });
